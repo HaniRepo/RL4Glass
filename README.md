@@ -21,7 +21,8 @@ The current validation implementations are listed below with a brief description
 | Validation V3       | Validation with dynamic coefficient calculation based on user input for gob initial temperature and other settings |
 | Validation V4       | Stability check of mold temperature over 5000 cycles with two scenarios (constant settle or cooling values)      |
 | Validation V5       | Dynamic stability check  and validation of the cases for consecutive cycles(Setup II)|
-| Validation V6       | chacking the behaviour after stability by increasing and decreasing T_mold, T_gob and  T_air|
+| Validation V6       | Chacking the behaviour after stability by increasing and decreasing T_mold, T_gob and  T_air|
+| Validation V7       | Adding the reinforcement Learning controllr to handle the distortion|
 
 > The validation versions are designed to test the robustness and accuracy of the heat transfer model by running simulations with varying parameters. Each version introduces different test scenarios for checking mold and gob temperature behavior.
 
@@ -78,6 +79,11 @@ In this version, as requested in the meeting, we added setup II validation scrip
 ### Validation Version 6
 **Description:**  
 In this version, we switched to python. Therefore, the simulink file has been convereted to C code and used as an input to mimic the simulation set up. Then we used stability test to find the stable point of the simulation. Reaching to that point, we added distortion to different parameter to see the behaviour of the system and anlyze the related control parameters.
+
+### Validation Version 7
+**Description:**  
+After having system stabilized,in this version, we increase/decrease the initial temperature of the gob to mimic changing different gob at the real process. Then, the reinforcement learning controller is activated to change the time of contact and time of cooling to adjust the system with new setting.
+
 
 **Data dependency:**  
 - `coefficients.csv`: Contains the coefficients calculated for different cases and control settings.
