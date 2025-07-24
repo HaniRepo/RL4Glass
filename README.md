@@ -1,6 +1,6 @@
 # RL4Glass
-# Simulation of the Heating Transfer Using MATLAB Simulink
-This repository addresses the Simulink model of the simulation of heat transfer between the gob and the mold as provided by the Glassform project.
+# Simulation of the Heating Transfer, validation, and control using Reinforcement Learning
+This repository addresses the Simulink model of the simulation of heat transfer between the gob and the mold as provided by the Glassform project. We simulated the model using MATLAB, Simulink. Them we analyzed and validated the model using general python libraries. FInally, we add the Reinforcement Learning controller to handle the disturbances in the simulation.
 
 ## Versions Overview
 The project is developed in multiple stages, starting with a base schema and evolving to incorporate more detailed modeling and cooling phases. Key milestones include:
